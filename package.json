@@ -17,6 +17,7 @@
     "@modules/2fa": "file:./modules/2fa/",
     "@modules/app-menu": "file:./modules/app-menu/",
     "@modules/chat": "file:./modules/chat/",
+    "@modules/contact-us": "file:./modules/contact-us/",
     "@modules/login": "file:./modules/login/",
     "@modules/maps": "file:./modules/maps/",
     "@modules/navigation-tabs": "file:./modules/navigation-tabs/",
