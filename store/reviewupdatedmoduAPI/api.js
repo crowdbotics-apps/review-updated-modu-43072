@@ -166,6 +166,63 @@ function modules_booking_shopify_booking_retrieve(payload) {
 function modules_booking_shopify_booking_create(payload) {
   return reviewupdatedmoduAPI.post(`/modules/booking/shopify/booking/`)
 }
+function modules_disqus_comment_list(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/disqus/comment/`, {
+    params: { page: payload.page, page_size: payload.page_size }
+  })
+}
+function modules_disqus_comment_create(payload) {
+  return reviewupdatedmoduAPI.post(`/modules/disqus/comment/`, payload.data)
+}
+function modules_disqus_comment_like_list(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/disqus/comment-like/`, {
+    params: { page: payload.page, page_size: payload.page_size }
+  })
+}
+function modules_disqus_comment_like_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/disqus/comment-like/`,
+    payload.data
+  )
+}
+function modules_disqus_comment_like_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/disqus/comment-like/${payload.id}/`)
+}
+function modules_disqus_comment_like_update(payload) {
+  return reviewupdatedmoduAPI.put(
+    `/modules/disqus/comment-like/${payload.id}/`,
+    payload.data
+  )
+}
+function modules_disqus_comment_like_partial_update(payload) {
+  return reviewupdatedmoduAPI.patch(
+    `/modules/disqus/comment-like/${payload.id}/`,
+    payload.data
+  )
+}
+function modules_disqus_comment_like_destroy(payload) {
+  return reviewupdatedmoduAPI.delete(
+    `/modules/disqus/comment-like/${payload.id}/`
+  )
+}
+function modules_disqus_comment_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/disqus/comment/${payload.id}/`)
+}
+function modules_disqus_comment_update(payload) {
+  return reviewupdatedmoduAPI.put(
+    `/modules/disqus/comment/${payload.id}/`,
+    payload.data
+  )
+}
+function modules_disqus_comment_partial_update(payload) {
+  return reviewupdatedmoduAPI.patch(
+    `/modules/disqus/comment/${payload.id}/`,
+    payload.data
+  )
+}
+function modules_disqus_comment_destroy(payload) {
+  return reviewupdatedmoduAPI.delete(`/modules/disqus/comment/${payload.id}/`)
+}
 function modules_docusign_auth_token_retrieve(payload) {
   return reviewupdatedmoduAPI.get(`/modules/docusign/auth/token/`)
 }
@@ -225,6 +282,86 @@ function modules_files_uploads_partial_update(payload) {
 }
 function modules_files_uploads_destroy(payload) {
   return reviewupdatedmoduAPI.delete(`/modules/files/uploads/${payload.id}/`)
+}
+function modules_hubspot_service_contact_deals_list_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(
+    `/modules/hubspot/service/${payload.id}/contact/deals/list/`
+  )
+}
+function modules_hubspot_service_deals_remove_destroy(payload) {
+  return reviewupdatedmoduAPI.delete(
+    `/modules/hubspot/service/${payload.id}/deals/remove/`
+  )
+}
+function modules_hubspot_service_deals_single_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(
+    `/modules/hubspot/service/${payload.id}/deals/single/`
+  )
+}
+function modules_hubspot_service_meeting_contacts_list_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(
+    `/modules/hubspot/service/${payload.id}/meeting/contacts/list/`
+  )
+}
+function modules_hubspot_service_ticket_associations_create_update(payload) {
+  return reviewupdatedmoduAPI.put(
+    `/modules/hubspot/service/${payload.id}/ticket/associations/${payload.toObjectType}/${payload.toObjectId}/create/`,
+    payload.data
+  )
+}
+function modules_hubspot_service_ticket_associations_list_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(
+    `/modules/hubspot/service/${payload.id}/ticket/associations/${payload.toObjectType}/list/`
+  )
+}
+function modules_hubspot_service_tickets_remove_destroy(payload) {
+  return reviewupdatedmoduAPI.delete(
+    `/modules/hubspot/service/${payload.id}/tickets/remove/`
+  )
+}
+function modules_hubspot_service_tickets_single_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(
+    `/modules/hubspot/service/${payload.id}/tickets/single/`
+  )
+}
+function modules_hubspot_service_access_token_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/hubspot/service/access/token/`,
+    payload.data
+  )
+}
+function modules_hubspot_service_deals_associations_create_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/hubspot/service/deals/associations/create/`,
+    payload.data
+  )
+}
+function modules_hubspot_service_deals_create_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/hubspot/service/deals/create/`,
+    payload.data
+  )
+}
+function modules_hubspot_service_deals_list_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/hubspot/service/deals/list/`)
+}
+function modules_hubspot_service_events_create_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/hubspot/service/events/create/`,
+    payload.data
+  )
+}
+function modules_hubspot_service_tickets_create_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/hubspot/service/tickets/create/`,
+    payload.data
+  )
+}
+function modules_hubspot_service_tickets_list_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/hubspot/service/tickets/list/`)
+}
+function modules_hubspot_service_webhook_create(payload) {
+  return reviewupdatedmoduAPI.post(`/modules/hubspot/service/webhook/`)
 }
 function modules_mailchimp_audience_add_list_member_create(payload) {
   return reviewupdatedmoduAPI.post(
@@ -669,6 +806,18 @@ export const apiService = {
   modules_booking_plans_destroy,
   modules_booking_shopify_booking_retrieve,
   modules_booking_shopify_booking_create,
+  modules_disqus_comment_list,
+  modules_disqus_comment_create,
+  modules_disqus_comment_like_list,
+  modules_disqus_comment_like_create,
+  modules_disqus_comment_like_retrieve,
+  modules_disqus_comment_like_update,
+  modules_disqus_comment_like_partial_update,
+  modules_disqus_comment_like_destroy,
+  modules_disqus_comment_retrieve,
+  modules_disqus_comment_update,
+  modules_disqus_comment_partial_update,
+  modules_disqus_comment_destroy,
   modules_docusign_auth_token_retrieve,
   modules_docusign_envelope_create_create,
   modules_docusign_envelope_download_retrieve,
@@ -684,6 +833,22 @@ export const apiService = {
   modules_files_uploads_update,
   modules_files_uploads_partial_update,
   modules_files_uploads_destroy,
+  modules_hubspot_service_contact_deals_list_retrieve,
+  modules_hubspot_service_deals_remove_destroy,
+  modules_hubspot_service_deals_single_retrieve,
+  modules_hubspot_service_meeting_contacts_list_retrieve,
+  modules_hubspot_service_ticket_associations_create_update,
+  modules_hubspot_service_ticket_associations_list_retrieve,
+  modules_hubspot_service_tickets_remove_destroy,
+  modules_hubspot_service_tickets_single_retrieve,
+  modules_hubspot_service_access_token_create,
+  modules_hubspot_service_deals_associations_create_create,
+  modules_hubspot_service_deals_create_create,
+  modules_hubspot_service_deals_list_retrieve,
+  modules_hubspot_service_events_create_create,
+  modules_hubspot_service_tickets_create_create,
+  modules_hubspot_service_tickets_list_retrieve,
+  modules_hubspot_service_webhook_create,
   modules_mailchimp_audience_add_list_member_create,
   modules_mailchimp_audience_add_or_remove_member_tag_create,
   modules_mailchimp_audience_add_segment_create,
