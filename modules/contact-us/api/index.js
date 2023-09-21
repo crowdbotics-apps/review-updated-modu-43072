@@ -1,9 +1,9 @@
 import { getGlobalOptions } from "@options";
 const global = getGlobalOptions();
 const BASE_URL = global.url;
-export const getQr = async data => {
+export const sendQuery = async data => {
   try {
-    const response = await fetch(`${BASE_URL}/modules/qr-code/qrcode/`, {
+    const response = await fetch(`${BASE_URL}/modules/contact-us/contact_us/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -12,7 +12,6 @@ export const getQr = async data => {
     });
     return response;
   } catch (error) {
-    console.log("ERROR: ", error);
     throw new Error("NETWORK_ERROR").message;
   }
 };

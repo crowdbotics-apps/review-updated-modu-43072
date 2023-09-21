@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home";
+import ContactForm from "../screens/ContactForm";
+import ContactUs from "../screens/ContactUs";
 const Stack = createStackNavigator();
 
 const Navigator = () => {
@@ -14,7 +15,8 @@ const Navigator = () => {
   }}>
     <Stack.Screen options={{
       headerShown: false
-    }} name="Home" component={Home} />
+    }} name="ContactUs" component={ContactUs} />
+    <Stack.Screen name="ContactForm" component={ContactForm} />
 
   </Stack.Navigator>;
 };
