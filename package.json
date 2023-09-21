@@ -23,7 +23,6 @@
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
     "@reduxjs/toolkit": "^1.9.5",
-    "@stripe/stripe-react-native": "^0.2.2",
     "axios": "^1.4.0",
     "babel-plugin-import-glob": "^2.0.0",
     "prop-types": "15.8.1",
