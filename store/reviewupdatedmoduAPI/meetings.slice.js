@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const modules_hubspot_service_deals_associations_create_create = createAsyncThunk(
-  "dealAssociations/modules_hubspot_service_deals_associations_create_create",
+export const modules_appointment_service_appointment_sync_create = createAsyncThunk(
+  "meetings/modules_appointment_service_appointment_sync_create",
   async payload => {
-    const response = await apiService.modules_hubspot_service_deals_associations_create_create(
+    const response = await apiService.modules_appointment_service_appointment_sync_create(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const dealAssociationsSlice = createSlice({
-  name: "dealAssociations",
+const meetingsSlice = createSlice({
+  name: "meetings",
   initialState,
   reducers: {},
   extraReducers: {
-    [modules_hubspot_service_deals_associations_create_create.pending]: (
+    [modules_appointment_service_appointment_sync_create.pending]: (
       state,
       action
     ) => {
@@ -23,7 +23,7 @@ const dealAssociationsSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [modules_hubspot_service_deals_associations_create_create.fulfilled]: (
+    [modules_appointment_service_appointment_sync_create.fulfilled]: (
       state,
       action
     ) => {
@@ -32,7 +32,7 @@ const dealAssociationsSlice = createSlice({
         state.api.loading = "idle"
       }
     },
-    [modules_hubspot_service_deals_associations_create_create.rejected]: (
+    [modules_appointment_service_appointment_sync_create.rejected]: (
       state,
       action
     ) => {
@@ -44,6 +44,6 @@ const dealAssociationsSlice = createSlice({
   }
 })
 export default {
-  modules_hubspot_service_deals_associations_create_create,
-  slice: dealAssociationsSlice
+  modules_appointment_service_appointment_sync_create,
+  slice: meetingsSlice
 }
