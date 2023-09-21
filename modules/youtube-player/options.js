@@ -1,6 +1,9 @@
+
 import { Dimensions, StyleSheet } from "react-native";
+
 const YOUTUBE_API_KEY = "";
 const VIDEOS_IDS = [];
+
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: "white"
@@ -32,16 +35,8 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 15
   },
-  iconValue: {
-    marginTop: -12,
-    marginLeft: 7,
-    color: "#fff"
-  },
-  iconNextValue: {
-    marginTop: -12,
-    marginLeft: 10,
-    color: "#fff"
-  },
+  iconValue: { marginTop: -12, marginLeft: 7, color: "#fff" },
+  iconNextValue: { marginTop: -12, marginLeft: 10, color: "#fff" },
   loopStyle: {
     flexDirection: "row",
     justifyContent: "space-around",
@@ -54,6 +49,7 @@ export const styles = StyleSheet.create({
     borderRadius: 7
   }
 });
+
 const playerDefaultSetting = {
   isReady: false,
   status: null,
@@ -66,6 +62,7 @@ const playerDefaultSetting = {
   fullscreen: false,
   playerWidth: Dimensions.get("window").width
 };
+
 export default {
   styles: styles,
   playerDefaultSetting: playerDefaultSetting,
