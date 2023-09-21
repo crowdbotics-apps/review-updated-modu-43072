@@ -1,11 +1,17 @@
 import React from "react";
-import { FlatList, Image, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View
+} from "react-native";
+
 import styles from "./styles";
 import { tracks } from "./options";
 
-const TracksList = ({
-  onTrackItemPress
-}) => {
+const TracksList = ({ onTrackItemPress }) => {
   const {
     container,
     itemStyle,
@@ -19,15 +25,15 @@ const TracksList = ({
     trackDescBox
   } = styles;
 
-  const renderItem = ({
-    item
-  }) => {
+  const renderItem = ({ item }) => {
     const artImg = item.artwork;
-    return <TouchableOpacity onPress={() => onTrackItemPress(item)} style={[itemStyle]}>
+
+    return (
+            <TouchableOpacity
+                onPress={() => onTrackItemPress(item)}
+                style={[itemStyle]}>
                 <View style={trackImgBox}>
-                    <Image style={trackImg} source={{
-          uri: artImg || "jt"
-        }} />
+                    <Image style={trackImg} source={{ uri: artImg || "jt" }} />
                 </View>
                 <View style={trackDescBox}>
                     <View style={titleBox}>
@@ -37,14 +43,17 @@ const TracksList = ({
                         <Text style={subTitle}>{item?.artist || item?.album || "Unknown"}</Text>
                     </View>
                 </View>
-            </TouchableOpacity>;
+            </TouchableOpacity>
+    );
   };
 
-  return <SafeAreaView style={container}>
+  return (
+        <SafeAreaView style={container}>
             <View style={[listBox]}>
-                <FlatList data={tracks} renderItem={renderItem} keyExtractor={item => item.id} showsVerticalScrollIndicator={false} />
+                <FlatList data={tracks} renderItem={renderItem} keyExtractor={item => item.id} showsVerticalScrollIndicator={false}/>
             </View>
-        </SafeAreaView>;
+        </SafeAreaView>
+  );
 };
 
 export default TracksList;

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const circleStyle = heightWidth => ({
+const circleStyle = (heightWidth) => ({
   borderRadius: heightWidth / 2,
   width: heightWidth,
   height: heightWidth,
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#172244",
     marginHorizontal: 10,
     borderRadius: 10
+
   },
   trackImgBox: {
     flex: 1,
@@ -41,7 +42,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     display: "flex"
   },
-  trackImg: { ...circleStyle(50)
+  trackImg: {
+    ...circleStyle(50)
   },
   titleBox: {
     flex: 2,
@@ -73,4 +75,5 @@ const styles = StyleSheet.create({
     bottom: 0
   }
 });
+
 export default styles;

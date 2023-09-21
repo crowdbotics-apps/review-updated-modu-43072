@@ -82,6 +82,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-qr-code](modules/qr-code)
 - [react-native-signature](modules/signature)
 - [react-native-contact-us](modules/contact-us)
+- [react-native-audio-player](modules/audio-player)
 
 # Getting started: Frontend
 

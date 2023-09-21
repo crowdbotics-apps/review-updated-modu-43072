@@ -1,8 +1,12 @@
-export const tracks = [{
-  id: "",
-  path: "",
-  title: "",
-  artist: "",
-  artwork: "",
-  album: ""
-}];
+
+export const tracks = [
+  {
+    id: "",
+    path: "",
+    title: "",
+    artist: "",
+    artwork: "",
+    album: ""
+  }
+
+];
