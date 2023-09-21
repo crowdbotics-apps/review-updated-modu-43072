@@ -61,6 +61,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-zoom-info](backend/modules)
 - [django-mailchimp](backend/modules)
 - [django-slack](backend/modules)
+- [react-native-app-menu](modules/app-menu)
 
 # Getting started: Frontend
 
