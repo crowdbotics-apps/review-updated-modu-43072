@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "920efdb895c7a1270b24fc7d07e5f7f658019a4b378d582cf97155fb7901f93c"
+            "sha256": "1a52f3aa8a53f924acd29c605be17ad315f1a04df267a907207564ab58ae5ba9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -59,6 +59,10 @@
         "cb-django-booking": {
             "editable": true,
             "path": "./modules/django_booking"
+        },
+        "cb-django-core": {
+            "editable": true,
+            "path": "./modules/django_core"
         },
         "cb-django-disqus": {
             "editable": true,
