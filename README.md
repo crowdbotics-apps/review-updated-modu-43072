@@ -80,6 +80,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-core](backend/modules)
 - [react-native-navigation-tabs](modules/navigation-tabs)
 - [react-native-qr-code](modules/qr-code)
+- [react-native-signature](modules/signature)
 
 # Getting started: Frontend
 
