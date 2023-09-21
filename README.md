@@ -68,6 +68,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-booking](backend/modules)
 - [react-native-2fa](modules/2fa)
 - [react-native-push-notifications](modules/push-notifications)
+- [django-docusign](backend/modules)
 
 # Getting started: Frontend
 
