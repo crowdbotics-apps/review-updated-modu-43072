@@ -62,6 +62,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-mailchimp](backend/modules)
 - [django-slack](backend/modules)
 - [react-native-app-menu](modules/app-menu)
+- [react-native-maps](modules/maps)
 
 # Getting started: Frontend
 
