@@ -71,6 +71,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-docusign](backend/modules)
 - [django-openai](backend/modules)
 - [django-drive](backend/modules)
+- [django-files](backend/modules)
 
 # Getting started: Frontend
 

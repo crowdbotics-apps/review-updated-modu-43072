@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7eafea6f2a9479987b0f890b0bc14094dd7efc54933ddcbbc72e24edda207e0f"
+            "sha256": "ac79c8d3699394c79b34257949397683aa24b5eccc878e4ccfaf9b9d0f339cdc"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -67,6 +67,10 @@
         "cb-django-drive": {
             "editable": true,
             "path": "./modules/django_drive"
+        },
+        "cb-django-files": {
+            "editable": true,
+            "path": "./modules/django_files"
         },
         "cb-django-mailchimp": {
             "editable": true,
