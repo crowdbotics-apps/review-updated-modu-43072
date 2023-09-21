@@ -77,6 +77,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-login](modules/login)
 - [react-native-onboarding](modules/onboarding)
 - [react-native-youtube-player](modules/youtube-player)
+- [django-core](backend/modules)
 
 # Getting started: Frontend
 
