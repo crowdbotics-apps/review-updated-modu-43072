@@ -72,6 +72,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-openai](backend/modules)
 - [django-drive](backend/modules)
 - [django-files](backend/modules)
+- [django-disqus](backend/modules)
 
 # Getting started: Frontend
 
