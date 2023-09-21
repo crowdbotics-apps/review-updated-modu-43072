@@ -79,6 +79,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-youtube-player](modules/youtube-player)
 - [django-core](backend/modules)
 - [react-native-navigation-tabs](modules/navigation-tabs)
+- [react-native-qr-code](modules/qr-code)
 
 # Getting started: Frontend
 
