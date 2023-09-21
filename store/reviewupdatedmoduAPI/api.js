@@ -181,6 +181,27 @@ function modules_docusign_envelope_retrieve_retrieve(payload) {
 function modules_docusign_envelope_retrieve_all_retrieve(payload) {
   return reviewupdatedmoduAPI.get(`/modules/docusign/envelope/retrieve-all/`)
 }
+function modules_drive_service_create_folder_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/drive/service/create/folder/`,
+    payload.data
+  )
+}
+function modules_drive_service_file_list_retrieve(payload) {
+  return reviewupdatedmoduAPI.get(`/modules/drive/service/file/list/`)
+}
+function modules_drive_service_share_file_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/drive/service/share/file/`,
+    payload.data
+  )
+}
+function modules_drive_service_upload_file_create(payload) {
+  return reviewupdatedmoduAPI.post(
+    `/modules/drive/service/upload/file/`,
+    payload.data
+  )
+}
 function modules_files_uploads_list(payload) {
   return reviewupdatedmoduAPI.get(`/modules/files/uploads/`)
 }
@@ -653,6 +674,10 @@ export const apiService = {
   modules_docusign_envelope_download_retrieve,
   modules_docusign_envelope_retrieve_retrieve,
   modules_docusign_envelope_retrieve_all_retrieve,
+  modules_drive_service_create_folder_create,
+  modules_drive_service_file_list_retrieve,
+  modules_drive_service_share_file_create,
+  modules_drive_service_upload_file_create,
   modules_files_uploads_list,
   modules_files_uploads_create,
   modules_files_uploads_retrieve,
