@@ -18,7 +18,6 @@
     "@modules/app-menu": "file:./modules/app-menu/",
     "@modules/maps": "file:./modules/maps/",
     "@modules/privacy-policy-webview": "file:./modules/privacy-policy-webview/",
-    "@modules/push-notifications": "file:./modules/push-notifications/",
     "@modules/terms-and-conditions-webview": "file:./modules/terms-and-conditions-webview/",
     "@react-native-masked-view/masked-view": "^0.2.9",
     "@react-navigation/native": "^6.1.6",
