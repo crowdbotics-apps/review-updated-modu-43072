@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a99f5d9b168ed843ec422b7e6669bb59307a4a91d39fed5e7e492b0043fcef8e"
+            "sha256": "47f90536661e72ad2a3d04c546045e93e9f418247fce396250e7007421fc9e0e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,6 +55,10 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==5.3.1"
+        },
+        "cb-django-mailchimp": {
+            "editable": true,
+            "path": "./modules/django_mailchimp"
         },
         "cb-zoom-info": {
             "editable": true,
@@ -637,6 +641,12 @@
             ],
             "markers": "python_version >= '3.8'",
             "version": "==2023.7.1"
+        },
+        "mailchimp-marketing": {
+            "hashes": [
+                "sha256:a5bcb3ebd3be60908c65af765f8195724e6fd2d61ecf6da667a794c5bc7b84d3"
+            ],
+            "version": "==3.0.80"
         },
         "markuppy": {
             "hashes": [

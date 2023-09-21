@@ -34,3 +34,4 @@ pipenv = "*"
 django-import-export = "*"
 drf-spectacular = "~=0.26.4"
 cb-zoom-info = {editable = true, path = "./modules/django_zoom_info"}
+cb-django-mailchimp = {editable = true, path = "./modules/django_mailchimp"}
