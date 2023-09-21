@@ -85,6 +85,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-audio-player](modules/audio-player)
 - [react-native-image-gallery](modules/image-gallery)
 - [react-native-pdf-viewer](modules/pdfviewer)
+- [react-native-fingerprint-authentication](modules/fingerprint-authentication)
 
 # Getting started: Frontend
 
