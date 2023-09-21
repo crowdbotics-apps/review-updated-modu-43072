@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "58ee44f81e7be2f2d8e88cf2787f1519a000811698509fbcfe28c3d73bedfc4c"
+            "sha256": "920efdb895c7a1270b24fc7d07e5f7f658019a4b378d582cf97155fb7901f93c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -75,6 +75,10 @@
         "cb-django-files": {
             "editable": true,
             "path": "./modules/django_files"
+        },
+        "cb-django-google-appointment": {
+            "editable": true,
+            "path": "./modules/django_google_appointment"
         },
         "cb-django-mailchimp": {
             "editable": true,
