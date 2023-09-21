@@ -4,7 +4,6 @@ import { OptionsContext } from "@options";
 import PropTypes from "prop-types";
 import PDFView from "react-native-view-pdf";
 import Loader from "./Loader";
-
 const PdfViewer = ({
   fadeInDuration,
   onError,
@@ -17,30 +16,43 @@ const PdfViewer = ({
 }) => {
   const [loading, setLoading] = useState(true);
   const options = useContext(OptionsContext);
-  const {
-    styles
-  } = options;
+  const { styles } = options;
 
   const loadedHandle = () => {
     setLoading(false);
   };
 
   const handlePageChnaged = () => {};
-
   const handleScrolled = () => {};
 
   const handleError = error => {
-    Alert.alert("Loading Failed!", "Please double check you have provided the right url for the PDF file");
-
+    Alert.alert(
+      "Loading Failed!",
+      "Please double check you have provided the right url for the PDF file"
+    );
     if (onError) {
       onError(error);
     }
   };
 
-  return <View style={styles.container}>
+  return (
+    <View style={styles.container}>
       {loading && <Loader message={"Loading..."} />}
-      <PDFView fadeInDuration={fadeInDuration || options.fadeInDuration} style={styles.pdf} resource={resources[resourceType] || options.resources[options.resourceType]} resourceType={resourceType || options.resourceType} onLoad={onLoad || loadedHandle} onError={handleError} enableAnnotations={enableAnnotations || true} onPageChanged={onPageChanged || handlePageChnaged} onScrolled={onScrolled || handleScrolled} />
-    </View>;
+      <PDFView
+        fadeInDuration={fadeInDuration || options.fadeInDuration}
+        style={styles.pdf}
+        resource={
+          resources[resourceType] || options.resources[options.resourceType]
+        }
+        resourceType={resourceType || options.resourceType}
+        onLoad={onLoad || loadedHandle}
+        onError={handleError}
+        enableAnnotations={enableAnnotations || true}
+        onPageChanged={onPageChanged || handlePageChnaged}
+        onScrolled={onScrolled || handleScrolled}
+      />
+    </View>
+  );
 };
 
 PdfViewer.propTypes = {
@@ -53,6 +65,7 @@ PdfViewer.propTypes = {
   resourceType: PropTypes.string,
   fadeInDuration: PropTypes.number
 };
+
 export default {
   title: "PDF Viewer",
   navigator: PdfViewer

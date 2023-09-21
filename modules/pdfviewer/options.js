@@ -1,10 +1,12 @@
 import { StyleSheet } from "react-native";
+
 export const resources = {
   url: "http://samples.leanpub.com/thereactnativebook-sample.pdf",
   base64: "JVBERi0xLjMKJcfs..."
 };
 export const resourceType = "url";
 export const fadeInDuration = 250.0;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1
@@ -13,6 +15,7 @@ const styles = StyleSheet.create({
     flex: 1
   }
 });
+
 export default {
   styles: styles,
   resources: resources,

@@ -84,6 +84,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-contact-us](modules/contact-us)
 - [react-native-audio-player](modules/audio-player)
 - [react-native-image-gallery](modules/image-gallery)
+- [react-native-pdf-viewer](modules/pdfviewer)
 
 # Getting started: Frontend
 
