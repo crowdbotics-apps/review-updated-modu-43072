@@ -78,6 +78,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-onboarding](modules/onboarding)
 - [react-native-youtube-player](modules/youtube-player)
 - [django-core](backend/modules)
+- [react-native-navigation-tabs](modules/navigation-tabs)
 
 # Getting started: Frontend
 
