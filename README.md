@@ -83,6 +83,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-signature](modules/signature)
 - [react-native-contact-us](modules/contact-us)
 - [react-native-audio-player](modules/audio-player)
+- [react-native-image-gallery](modules/image-gallery)
 
 # Getting started: Frontend
 
