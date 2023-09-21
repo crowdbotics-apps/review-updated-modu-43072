@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "124bbc59e8168ac9fcd87be2efd9bb662a51479c069874cad2f38fa5a9b9f06b"
+            "sha256": "a1ec6aa50cd368e6aa94b1b3353ae53a1f2b93f1f80bbc9b7d14e80dbd9044c4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -67,6 +67,10 @@
         "cb-django-mailchimp": {
             "editable": true,
             "path": "./modules/django_mailchimp"
+        },
+        "cb-django-openai": {
+            "editable": true,
+            "path": "./modules/django_openai"
         },
         "cb-django-slack": {
             "editable": true,
@@ -882,7 +886,6 @@
             "version": "==2.21"
         },
         "pyjwt": {
-            "extras": [],
             "hashes": [
                 "sha256:57e28d156e3d5c10088e0c68abb90bfac3df82b40a71bd0daa20c65ccd5c23de",
                 "sha256:59127c392cc44c2da5bb3192169a91f429924e17aff6534d70fdc02ab3e04320"
