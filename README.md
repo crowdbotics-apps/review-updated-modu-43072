@@ -74,6 +74,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-disqus](backend/modules)
 - [django-google-appointment](backend/modules)
 - [react-native-chat](modules/chat)
+- [react-native-login](modules/login)
 
 # Getting started: Frontend
 
