@@ -70,6 +70,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [react-native-push-notifications](modules/push-notifications)
 - [django-docusign](backend/modules)
 - [django-openai](backend/modules)
+- [django-drive](backend/modules)
 
 # Getting started: Frontend
 
