@@ -1,8 +1,11 @@
+
 import React from "react";
 import Navigator from "./Navigator";
 
 const AddressAutoComplete = () => {
-  return <Navigator />;
+  return (
+        <Navigator />
+  );
 };
 
 export default {
