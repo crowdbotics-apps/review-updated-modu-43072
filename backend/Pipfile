@@ -45,3 +45,4 @@ cb-django-disqus = {editable = true, path = "./modules/django_disqus"}
 cb-django-google-appointment = {editable = true, path = "./modules/django_google_appointment"}
 cb-django-core = {editable = true, path = "./modules/django_core"}
 cb-django-blackbaud = {editable = true, path = "./modules/blackbaud"}
+cb-firebase-push-notifications = {editable = true, path = "./modules/firebase_push_notifications"}

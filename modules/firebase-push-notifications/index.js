@@ -6,17 +6,17 @@ import Notifications from "./flatlist";
 
 const PushNotifications = () => {
   const options = useContext(OptionsContext);
-  const {
-    authToken,
-    userID,
-    styles
-  } = options;
+  const { authToken, userID, styles } = options;
+
   useEffect(() => {
     RemotePushController(authToken, userID);
   }, []);
-  return <SafeAreaView style={styles.container}>
+
+  return (
+    <SafeAreaView style={styles.container}>
       <Notifications />
-    </SafeAreaView>;
+    </SafeAreaView>
+  );
 };
 
 export default {
