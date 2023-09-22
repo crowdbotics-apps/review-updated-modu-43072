@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import React, { createRef, useContext, useState } from "react";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View , PixelRatio} from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 import { OptionsContext } from "@options";
 import PropTypes from "prop-types";
@@ -59,7 +59,7 @@ const Player = ({
       fullscreen: e.isFullscreen
     })} onProgress={e => setPlayerData({ ...playerData,
       currentTime: e.currentTime
-    })} style={[styles.player, _styles.evHgbkEF]} />
+    })} style={[styles.player, { height: PixelRatio.roundToNearestPixel(playerData.playerWidth / (16 / 9)) },]} />
 
       {(isForwordTimeDuration || isBackwordTimeDuration) && <View style={styles.buttonGroup}>
           {isForwordTimeDuration && <TouchableOpacity style={[styles.button]} onPress={handlePrevious}>
@@ -102,9 +102,6 @@ export default {
 };
 
 const _styles = StyleSheet.create({
-  evHgbkEF: {
-    height: "PixelRatio.roundToNearestPixel"
-  },
   OyVbThhk: {
     transform: [{
       rotateY: "180deg"
