@@ -38,537 +38,739 @@ export const addAttendee = createAsyncThunk("events/addAttendee", async data => 
     throw new Error();
   }
 });
-export const getAddressList = createAsyncThunk("events/addressList", async accessToken => {
-  try {
-    const response = await api.getAddressList(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+export const getAddressList = createAsyncThunk(
+  "events/addressList",
+  async (accessToken) => {
+    try {
+      const response = await api.getAddressList(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCodeList = createAsyncThunk("constituent/list", async accessToken => {
-  try {
-    const response = await api.getConstituentCodeList(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCodeList = createAsyncThunk(
+  "constituent/list",
+  async (accessToken) => {
+    try {
+      const response = await api.getConstituentCodeList(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCodeDetails = createAsyncThunk("constituents/detail", async data => {
-  try {
-    const response = await api.getConstituentCodeDetails(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCodeDetails = createAsyncThunk(
+  "constituents/detail",
+  async (data) => {
+    try {
+      const response = await api.getConstituentCodeDetails(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCodeListInConstituent = createAsyncThunk("constituents/listInConstituent", async data => {
-  try {
-    const response = await api.getConstituentCodeListInConstituent(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCodeListInConstituent = createAsyncThunk(
+  "constituents/listInConstituent",
+  async (data) => {
+    try {
+      const response = await api.getConstituentCodeListInConstituent(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCustomFieldCategories = createAsyncThunk("constituents/customFieldCategories", async data => {
-  try {
-    const response = await api.getConstituentCustomFieldCategories(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCustomFieldCategories = createAsyncThunk(
+  "constituents/customFieldCategories",
+  async (data) => {
+    try {
+      const response = await api.getConstituentCustomFieldCategories(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCustomFieldCategoriesDetails = createAsyncThunk("constituents/customFieldCategoriesDetails", async data => {
-  try {
-    const response = await api.getConstituentCustomFieldCategoriesDetails(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCustomFieldCategoriesDetails = createAsyncThunk(
+  "constituents/customFieldCategoriesDetails",
+  async (data) => {
+    try {
+      const response = await api.getConstituentCustomFieldCategoriesDetails(
+        data
+      );
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCustomFieldCategoriesValues = createAsyncThunk("constituents/customFieldCategoriesValues", async data => {
-  try {
-    const response = await api.getConstituentCustomFieldCategoriesValues(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCustomFieldCategoriesValues = createAsyncThunk(
+  "constituents/customFieldCategoriesValues",
+  async (data) => {
+    try {
+      const response = await api.getConstituentCustomFieldCategoriesValues(
+        data
+      );
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentCustomFieldList = createAsyncThunk("constituents/customFieldList", async token => {
-  try {
-    const response = await api.getConstituentCustomFieldList(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentCustomFieldList = createAsyncThunk(
+  "constituents/customFieldList",
+  async (token) => {
+    try {
+      const response = await api.getConstituentCustomFieldList(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const constituentList = createAsyncThunk("constituents/list", async accessToken => {
-  try {
-    const response = await api.getConstituentList(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const constituentList = createAsyncThunk(
+  "constituents/list",
+  async (accessToken) => {
+    try {
+      const response = await api.getConstituentList(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const createConstituent = createAsyncThunk("constituent/create", async data => {
-  try {
-    const response = await api.createConstituent(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const createConstituent = createAsyncThunk(
+  "constituent/create",
+  async (data) => {
+    try {
+      const response = await api.createConstituent(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const consentChannels = createAsyncThunk("consent/channels", async accessToken => {
-  try {
-    const response = await api.getChannels(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const consentChannels = createAsyncThunk(
+  "consent/channels",
+  async (accessToken) => {
+    try {
+      const response = await api.getChannels(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const constituentAppealList = createAsyncThunk("constituents/constituent_appeal_list/id", async data => {
-  try {
-    const response = await api.getConstituentAppealList(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const constituentAppealList = createAsyncThunk(
+  "constituents/constituent_appeal_list/id",
+  async (data) => {
+    try {
+      const response = await api.getConstituentAppealList(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const constituentAttachmentList = createAsyncThunk("constituents/attachment_list/id", async data => {
-  try {
-    const response = await api.getConstituentAttachmentList(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const constituentAttachmentList = createAsyncThunk(
+  "constituents/attachment_list/id",
+  async (data) => {
+    try {
+      const response = await api.getConstituentAttachmentList(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const constituentDetailsById = createAsyncThunk("constituents/constituents_details/id", async data => {
-  try {
-    const response = await api.getConstituentDetails(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const constituentDetailsById = createAsyncThunk(
+  "constituents/constituents_details/id",
+  async (data) => {
+    try {
+      const response = await api.getConstituentDetails(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationList = createAsyncThunk("constituents/education_list", async accessToken => {
-  try {
-    const response = await api.getEducationList(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const educationList = createAsyncThunk(
+  "constituents/education_list",
+  async (accessToken) => {
+    try {
+      const response = await api.getEducationList(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const currencyConfiguration = createAsyncThunk("constituents/get_currencyconfiguration", async accessToken => {
-  try {
-    const response = await api.getCurrencyConfiguration(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const currencyConfiguration = createAsyncThunk(
+  "constituents/get_currencyconfiguration",
+  async (accessToken) => {
+    try {
+      const response = await api.getCurrencyConfiguration(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const countriesList = createAsyncThunk("constituents/countries", async accessToken => {
-  try {
-    const response = await api.getCurrencyConfiguration(accessToken);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const countriesList = createAsyncThunk(
+  "constituents/countries",
+  async (accessToken) => {
+    try {
+      const response = await api.getCurrencyConfiguration(accessToken);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const constituentCustomFieldListSingleConstituent = createAsyncThunk("constituents/get_constituent_custom_field_list_in_single_constituent", async data => {
-  try {
-    const response = await api.getConstituentCustomFieldListSingleConstituent(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const constituentCustomFieldListSingleConstituent = createAsyncThunk(
+  "constituents/get_constituent_custom_field_list_in_single_constituent",
+  async (data) => {
+    try {
+      const response = await api.getConstituentCustomFieldListSingleConstituent(
+        data
+      );
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const customFieldEducationList = createAsyncThunk("constituents/get_custom_field_list_in_education", async data => {
-  try {
-    const response = await api.getCustomFieldEducationList(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const customFieldEducationList = createAsyncThunk(
+  "constituents/get_custom_field_list_in_education",
+  async (data) => {
+    try {
+      const response = await api.getCustomFieldEducationList(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationCustomFieldCategories = createAsyncThunk("constituents/get_education_custom_field_categories", async token => {
-  try {
-    const response = await api.getEducationCustomFieldCategories(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationCustomFieldCategories = createAsyncThunk(
+  "constituents/get_education_custom_field_categories",
+  async (token) => {
+    try {
+      const response = await api.getEducationCustomFieldCategories(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationDegrees = createAsyncThunk("constituents/get_education_degrees", async token => {
-  try {
-    const response = await api.getEducationDegrees(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationDegrees = createAsyncThunk(
+  "constituents/get_education_degrees",
+  async (token) => {
+    try {
+      const response = await api.getEducationDegrees(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationConstituentList = createAsyncThunk("constituents/get_education_list_in_constituent", async data => {
-  try {
-    const response = await api.getEducationConstituentList(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationConstituentList = createAsyncThunk(
+  "constituents/get_education_list_in_constituent",
+  async (data) => {
+    try {
+      const response = await api.getEducationConstituentList(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationRecordList = createAsyncThunk("constituents/get_education_record", async data => {
-  try {
-    const response = await api.getEducationRecord(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationRecordList = createAsyncThunk(
+  "constituents/get_education_record",
+  async (data) => {
+    try {
+      const response = await api.getEducationRecord(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationSchoolsList = createAsyncThunk("constituents/get_education_schools", async data => {
-  try {
-    const response = await api.getEducationsSchools(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationSchoolsList = createAsyncThunk(
+  "constituents/get_education_schools",
+  async (data) => {
+    try {
+      const response = await api.getEducationsSchools(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationStatusesList = createAsyncThunk("constituents/get_education_statuses", async token => {
-  try {
-    const response = await api.getEducationStatuses(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationStatusesList = createAsyncThunk(
+  "constituents/get_education_statuses",
+  async (token) => {
+    try {
+      const response = await api.getEducationStatuses(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationSubjectList = createAsyncThunk("constituents/get_education_subjects", async token => {
-  try {
-    const response = await api.getEducationSubject(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationSubjectList = createAsyncThunk(
+  "constituents/get_education_subjects",
+  async (token) => {
+    try {
+      const response = await api.getEducationSubject(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const educationTypesList = createAsyncThunk("constituents/get_education_types", async token => {
-  try {
-    const response = await api.getEducationTypes(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const educationTypesList = createAsyncThunk(
+  "constituents/get_education_types",
+  async (token) => {
+    try {
+      const response = await api.getEducationTypes(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const eventAttachmentList = createAsyncThunk("event/event_id/get_event_attachment_list", async data => {
-  try {
-    const response = await api.getEventAttachmentList(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const eventAttachmentList = createAsyncThunk(
+  "event/event_id/get_event_attachment_list",
+  async (data) => {
+    try {
+      const response = await api.getEventAttachmentList(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventFees = createAsyncThunk("event/event_id/get_event_fees", async data => {
-  try {
-    const response = await api.getEventFees(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventFees = createAsyncThunk(
+  "event/event_id/get_event_fees",
+  async (data) => {
+    try {
+      const response = await api.getEventFees(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventParticipantOptions = createAsyncThunk("event/id/get_event_participant_options", async data => {
-  try {
-    const response = await api.getEventParticipantOptions(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventParticipantOptions = createAsyncThunk(
+  "event/id/get_event_participant_options",
+  async (data) => {
+    try {
+      const response = await api.getEventParticipantOptions(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventParticipantsList = createAsyncThunk("event/participants_list", async data => {
-  try {
-    const response = await api.getEventParticipantsList(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventParticipantsList = createAsyncThunk(
+  "event/participants_list",
+  async (data) => {
+    try {
+      const response = await api.getEventParticipantsList(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventParticipantsDonation = createAsyncThunk("event/id/get_event_participant_donation", async data => {
-  try {
-    const response = await api.getEventParticipantsDonation(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventParticipantsDonation = createAsyncThunk(
+  "event/id/get_event_participant_donation",
+  async (data) => {
+    try {
+      const response = await api.getEventParticipantsDonation(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventParticipantFeePayments = createAsyncThunk("event/id/get_event_participant_fee_payments", async data => {
-  try {
-    const response = await api.getEventParticipantFeePayments(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventParticipantFeePayments = createAsyncThunk(
+  "event/id/get_event_participant_fee_payments",
+  async (data) => {
+    try {
+      const response = await api.getEventParticipantFeePayments(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventParticipantFees = createAsyncThunk("event/id/get_event_participant_fees", async data => {
-  try {
-    const response = await api.getEventParticipantFees(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventParticipantFees = createAsyncThunk(
+  "event/id/get_event_participant_fees",
+  async (data) => {
+    try {
+      const response = await api.getEventParticipantFees(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getParticipantOptions = createAsyncThunk("event/id/get_participant_options", async data => {
-  try {
-    const response = await api.getParticipantOptions(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getParticipantOptions = createAsyncThunk(
+  "event/id/get_participant_options",
+  async (data) => {
+    try {
+      const response = await api.getParticipantOptions(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventAttachment = createAsyncThunk("event/get_event_attachment", async data => {
-  try {
-    const response = await api.getEventAttachment(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventAttachment = createAsyncThunk(
+  "event/get_event_attachment",
+  async (data) => {
+    try {
+      const response = await api.getEventAttachment(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventAttachmentTags = createAsyncThunk("event/get_event_attachment_tags", async token => {
-  try {
-    const response = await api.getEventAttachmentTags(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventAttachmentTags = createAsyncThunk(
+  "event/get_event_attachment_tags",
+  async (token) => {
+    try {
+      const response = await api.getEventAttachmentTags(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getEventCategories = createAsyncThunk("event/get_event_categories", async token => {
-  try {
-    const response = await api.getEventCategories(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getEventCategories = createAsyncThunk(
+  "event/get_event_categories",
+  async (token) => {
+    try {
+      const response = await api.getEventCategories(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getParticipant = createAsyncThunk("event/get_participant", async data => {
-  try {
-    const response = await api.getParticipant(data);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getParticipant = createAsyncThunk(
+  "event/get_participant",
+  async (data) => {
+    try {
+      const response = await api.getParticipant(data);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getParticipantLevels = createAsyncThunk("event/get_participant_levels", async token => {
-  try {
-    const response = await api.getParticipantLevels(token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getParticipantLevels = createAsyncThunk(
+  "event/get_participant_levels",
+  async (token) => {
+    try {
+      const response = await api.getParticipantLevels(token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const createActionAttachment = createAsyncThunk("event/createActionAttachment", async data => {
-  try {
-    const response = await api.createActionAttachment(data.token, data.payload);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const createActionAttachment = createAsyncThunk(
+  "event/createActionAttachment",
+  async (data) => {
+    try {
+      const response = await api.createActionAttachment(data.token, data.payload);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const createConstituentAction = createAsyncThunk("event/createConstituentAction", async data => {
-  try {
-    const response = await api.createConstituentAction(data.token, data.payload);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const createConstituentAction = createAsyncThunk(
+  "event/createConstituentAction",
+  async (data) => {
+    try {
+      const response = await api.createConstituentAction(data.token, data.payload);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const createRating = createAsyncThunk("event/createRating", async data => {
-  try {
-    const response = await api.createRating(data.token, data.payload);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const createRating = createAsyncThunk(
+  "event/createRating",
+  async (data) => {
+    try {
+      const response = await api.createRating(data.token, data.payload);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const createRelationship = createAsyncThunk("event/createRelationship", async data => {
-  try {
-    const response = await api.createRelationship(data.token, data.payload);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const createRelationship = createAsyncThunk(
+  "event/createRelationship",
+  async (data) => {
+    try {
+      const response = await api.createRelationship(data.token, data.payload);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const deleteConstituentAction = createAsyncThunk("event/createRelationship", async data => {
-  try {
-    const response = await api.deleteConstituentAction(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const deleteConstituentAction = createAsyncThunk(
+  "event/createRelationship",
+  async (data) => {
+    try {
+      const response = await api.deleteConstituentAction(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const deleteConstituentActionAttachment = createAsyncThunk("event/deleteConstituentActionAttachment", async data => {
-  try {
-    const response = await api.deleteConstituentActionAttachment(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const deleteConstituentActionAttachment = createAsyncThunk(
+  "event/deleteConstituentActionAttachment",
+  async (data) => {
+    try {
+      const response = await api.deleteConstituentActionAttachment(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const deleteConstituentActionCustomField = createAsyncThunk("event/deleteConstituentActionCustomField", async data => {
-  try {
-    const response = await api.deleteConstituentActionCustomField(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const deleteConstituentActionCustomField = createAsyncThunk(
+  "event/deleteConstituentActionCustomField",
+  async (data) => {
+    try {
+      const response = await api.deleteConstituentActionCustomField(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const deleteRating = createAsyncThunk("event/deleteRating", async data => {
-  try {
-    const response = await api.deleteRating(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const deleteRating = createAsyncThunk(
+  "event/deleteRating",
+  async (data) => {
+    try {
+      const response = await api.deleteRating(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const deleteRelationship = createAsyncThunk("event/deleteRelationship", async data => {
-  try {
-    const response = await api.deleteRelationship(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const deleteRelationship = createAsyncThunk(
+  "event/deleteRelationship",
+  async (data) => {
+    try {
+      const response = await api.deleteRelationship(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const editRelationship = createAsyncThunk("event/editRelationship", async data => {
-  try {
-    const response = await api.editRelationship(data.token, data.id, data.payload);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const editRelationship = createAsyncThunk(
+  "event/editRelationship",
+  async (data) => {
+    try {
+      const response = await api.editRelationship(data.token, data.id, data.payload);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentActionAttachments = createAsyncThunk("event/getConstituentActionAttachments", async data => {
-  try {
-    const response = await api.getConstituentActionAttachments(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getConstituentActionAttachments = createAsyncThunk(
+  "event/getConstituentActionAttachments",
+  async (data) => {
+    try {
+      const response = await api.getConstituentActionAttachments(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getConstituentActionCustomFieldsCategories = createAsyncThunk("event/getConstituentActionCustomFieldsCategories", async data => {
-  try {
-    const response = await api.getConstituentActionCustomFieldsCategories(data.token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getConstituentActionCustomFieldsCategories = createAsyncThunk(
+  "event/getConstituentActionCustomFieldsCategories",
+  async (data) => {
+    try {
+      const response = await api.getConstituentActionCustomFieldsCategories(data.token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getRatingCategories = createAsyncThunk("event/getRatingCategories", async data => {
-  try {
-    const response = await api.getRatingCategories(data.token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getRatingCategories = createAsyncThunk(
+  "event/getRatingCategories",
+  async (data) => {
+    try {
+      const response = await api.getRatingCategories(data.token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getRelationshipDetails = createAsyncThunk("event/getRelationshipDetails", async data => {
-  try {
-    const response = await api.getRelationshipDetails(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getRelationshipDetails = createAsyncThunk(
+  "event/getRelationshipDetails",
+  async (data) => {
+    try {
+      const response = await api.getRelationshipDetails(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getRelationshipListInAllConstituents = createAsyncThunk("event/getRelationshipListInAllConstituents", async data => {
-  try {
-    const response = await api.getRelationshipListInAllConstituents(data.token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getRelationshipListInAllConstituents = createAsyncThunk(
+  "event/getRelationshipListInAllConstituents",
+  async (data) => {
+    try {
+      const response = await api.getRelationshipListInAllConstituents(data.token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getRelationshipListInSingleConstituent = createAsyncThunk("event/getRelationshipListInSingleConstituent", async data => {
-  try {
-    const response = await api.getRelationshipListInSingleConstituent(data.token, data.id);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getRelationshipListInSingleConstituent = createAsyncThunk(
+  "event/getRelationshipListInSingleConstituent",
+  async (data) => {
+    try {
+      const response = await api.getRelationshipListInSingleConstituent(data.token, data.id);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getRelationshipTypes = createAsyncThunk("event/getRelationshipTypes", async data => {
-  try {
-    const response = await api.getRelationshipTypes(data.token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+
+export const getRelationshipTypes = createAsyncThunk(
+  "event/getRelationshipTypes",
+  async (data) => {
+    try {
+      const response = await api.getRelationshipTypes(data.token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getSuffixes = createAsyncThunk("event/getSuffixes", async data => {
-  try {
-    const response = await api.getSuffixes(data.token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getSuffixes = createAsyncThunk(
+  "event/getSuffixes",
+  async (data) => {
+    try {
+      const response = await api.getSuffixes(data.token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
-export const getTitles = createAsyncThunk("event/getTitles", async data => {
-  try {
-    const response = await api.getTitles(data.token);
-    return response.data;
-  } catch (error) {
-    Alert.alert("Error", error.message);
-    throw new Error();
+);
+export const getTitles = createAsyncThunk(
+  "event/getTitles",
+  async (data) => {
+    try {
+      const response = await api.getTitles(data.token);
+      return response.data;
+    } catch (error) {
+      Alert.alert("Error", error.message);
+      throw new Error();
+    }
   }
-});
+);
+
 const initialState = {
   eventList: {
     entities: [],
@@ -872,50 +1074,17 @@ const initialState = {
       error: null
     }
   },
-  createConstituentApi: {
-    loading: "idle",
-    error: null
-  },
-  createActionAttachmentApi: {
-    loading: "idle",
-    error: null
-  },
-  createConstituentActionApi: {
-    loading: "idle",
-    error: null
-  },
-  createRatingApi: {
-    loading: "idle",
-    error: null
-  },
-  createRelationshipApi: {
-    loading: "idle",
-    error: null
-  },
-  deleteConstituentActionApi: {
-    loading: "idle",
-    error: null
-  },
-  deleteConstituentActionAttachmentApi: {
-    loading: "idle",
-    error: null
-  },
-  deleteConstituentActionCustomFieldApi: {
-    loading: "idle",
-    error: null
-  },
-  deleteRatingApi: {
-    loading: "idle",
-    error: null
-  },
-  deleteRelationshipApi: {
-    loading: "idle",
-    error: null
-  },
-  editRelationshipApi: {
-    loading: "idle",
-    error: null
-  },
+  createConstituentApi: { loading: "idle", error: null },
+  createActionAttachmentApi: { loading: "idle", error: null },
+  createConstituentActionApi: { loading: "idle", error: null },
+  createRatingApi: { loading: "idle", error: null },
+  createRelationshipApi: { loading: "idle", error: null },
+  deleteConstituentActionApi: { loading: "idle", error: null },
+  deleteConstituentActionAttachmentApi: { loading: "idle", error: null },
+  deleteConstituentActionCustomFieldApi: { loading: "idle", error: null },
+  deleteRatingApi: { loading: "idle", error: null },
+  deleteRelationshipApi: { loading: "idle", error: null },
+  editRelationshipApi: { loading: "idle", error: null },
   constituentActionAttachments: {
     entities: [],
     api: {
@@ -980,6 +1149,7 @@ const initialState = {
     }
   }
 };
+
 export const slice = createSlice({
   name: "events",
   initialState: initialState,
@@ -1061,7 +1231,7 @@ export const slice = createSlice({
         state.addAttendee.api.loading = "idle";
       }
     },
-    [getAddressList.pending]: state => {
+    [getAddressList.pending]: (state) => {
       if (state.addressList.api.loading === "idle") {
         state.addressList.api.loading = "pending";
         state.addressList.api.error = null;
@@ -1080,7 +1250,7 @@ export const slice = createSlice({
         state.addressList.api.loading = "idle";
       }
     },
-    [getConstituentCodeList.pending]: state => {
+    [getConstituentCodeList.pending]: (state) => {
       if (state.constituentCodeList.api.loading === "idle") {
         state.constituentCodeList.api.loading = "pending";
         state.constituentCodeList.api.error = null;
@@ -1099,7 +1269,7 @@ export const slice = createSlice({
         state.constituentCodeList.api.loading = "idle";
       }
     },
-    [getConstituentCodeDetails.pending]: state => {
+    [getConstituentCodeDetails.pending]: (state) => {
       if (state.constituentCodeDetail.api.loading === "idle") {
         state.constituentCodeDetail.api.loading = "pending";
         state.constituentCodeDetail.api.error = null;
@@ -1118,7 +1288,7 @@ export const slice = createSlice({
         state.constituentCodeDetail.api.loading = "idle";
       }
     },
-    [getConstituentCodeListInConstituent.pending]: state => {
+    [getConstituentCodeListInConstituent.pending]: (state) => {
       if (state.constituentCodeListInConstituent.api.loading === "idle") {
         state.constituentCodeListInConstituent.api.loading = "pending";
         state.constituentCodeListInConstituent.api.error = null;
@@ -1137,7 +1307,7 @@ export const slice = createSlice({
         state.constituentCodeListInConstituent.api.loading = "idle";
       }
     },
-    [getConstituentCustomFieldCategories.pending]: state => {
+    [getConstituentCustomFieldCategories.pending]: (state) => {
       if (state.constituentCustomFieldCategories.api.loading === "idle") {
         state.constituentCustomFieldCategories.api.loading = "pending";
         state.constituentCustomFieldCategories.api.error = null;
@@ -1156,45 +1326,57 @@ export const slice = createSlice({
         state.constituentCustomFieldCategories.api.loading = "idle";
       }
     },
-    [getConstituentCustomFieldCategoriesDetails.pending]: state => {
-      if (state.constituentCustomFieldCategoriesDetails.api.loading === "idle") {
+    [getConstituentCustomFieldCategoriesDetails.pending]: (state) => {
+      if (
+        state.constituentCustomFieldCategoriesDetails.api.loading === "idle"
+      ) {
         state.constituentCustomFieldCategoriesDetails.api.loading = "pending";
         state.constituentCustomFieldCategoriesDetails.api.error = null;
       }
     },
     [getConstituentCustomFieldCategoriesDetails.fulfilled]: (state, action) => {
-      if (state.constituentCustomFieldCategoriesDetails.api.loading === "pending") {
-        state.constituentCustomFieldCategoriesDetails.entities = action.payload.value;
+      if (
+        state.constituentCustomFieldCategoriesDetails.api.loading === "pending"
+      ) {
+        state.constituentCustomFieldCategoriesDetails.entities =
+          action.payload.value;
         state.constituentCustomFieldCategoriesDetails.api.loading = "idle";
       }
     },
     [getConstituentCustomFieldCategoriesDetails.rejected]: (state, action) => {
-      if (state.constituentCustomFieldCategoriesDetails.api.loading === "pending") {
+      if (
+        state.constituentCustomFieldCategoriesDetails.api.loading === "pending"
+      ) {
         state.constituentCustomFieldCategoriesDetails.api.error = action.error;
         state.constituentCustomFieldCategoriesDetails.entities = [];
         state.constituentCustomFieldCategoriesDetails.api.loading = "idle";
       }
     },
-    [getConstituentCustomFieldCategoriesValues.pending]: state => {
+    [getConstituentCustomFieldCategoriesValues.pending]: (state) => {
       if (state.constituentCustomFieldCategoriesValues.api.loading === "idle") {
         state.constituentCustomFieldCategoriesValues.api.loading = "pending";
         state.constituentCustomFieldCategoriesValues.api.error = null;
       }
     },
     [getConstituentCustomFieldCategoriesValues.fulfilled]: (state, action) => {
-      if (state.constituentCustomFieldCategoriesValues.api.loading === "pending") {
-        state.constituentCustomFieldCategoriesValues.entities = action.payload.value;
+      if (
+        state.constituentCustomFieldCategoriesValues.api.loading === "pending"
+      ) {
+        state.constituentCustomFieldCategoriesValues.entities =
+          action.payload.value;
         state.constituentCustomFieldCategoriesValues.api.loading = "idle";
       }
     },
     [getConstituentCustomFieldCategoriesValues.rejected]: (state, action) => {
-      if (state.constituentCustomFieldCategoriesValues.api.loading === "pending") {
+      if (
+        state.constituentCustomFieldCategoriesValues.api.loading === "pending"
+      ) {
         state.constituentCustomFieldCategoriesValues.api.error = action.error;
         state.constituentCustomFieldCategoriesValues.entities = [];
         state.constituentCustomFieldCategoriesValues.api.loading = "idle";
       }
     },
-    [getConstituentCustomFieldList.pending]: state => {
+    [getConstituentCustomFieldList.pending]: (state) => {
       if (state.constituentCustomFieldList.api.loading === "idle") {
         state.constituentCustomFieldList.api.loading = "pending";
         state.constituentCustomFieldList.api.error = null;
@@ -1231,6 +1413,7 @@ export const slice = createSlice({
         state.constituentList.api.error = null;
       }
     },
+
     [createConstituent.fulfilled]: (state, action) => {
       if (state.constituentListApi.loading === "pending") {
         state.constituentList = action.payload.value;
@@ -1375,24 +1558,39 @@ export const slice = createSlice({
         state.countriesListData.api.error = null;
       }
     },
-    [constituentCustomFieldListSingleConstituent.fulfilled]: (state, action) => {
-      if (state.constituentCustomFieldListSingleConstituent.api.loading === "pending") {
-        state.constituentCustomFieldListSingleConstituent.entities = action.payload.value;
+    [constituentCustomFieldListSingleConstituent.fulfilled]: (
+      state,
+      action
+    ) => {
+      if (
+        state.constituentCustomFieldListSingleConstituent.api.loading ===
+        "pending"
+      ) {
+        state.constituentCustomFieldListSingleConstituent.entities =
+          action.payload.value;
         state.constituentCustomFieldListSingleConstituent.api.loading = "idle";
       }
     },
     [constituentCustomFieldListSingleConstituent.rejected]: (state, action) => {
-      if (state.constituentCustomFieldListSingleConstituent.api.loading === "pending") {
-        state.constituentCustomFieldListSingleConstituent.api.error = action.error;
+      if (
+        state.constituentCustomFieldListSingleConstituent.api.loading ===
+        "pending"
+      ) {
+        state.constituentCustomFieldListSingleConstituent.api.error =
+          action.error;
         state.constituentCustomFieldListSingleConstituent.api.loading = "idle";
       }
     },
     [constituentCustomFieldListSingleConstituent.pending]: (state, action) => {
-      if (state.constituentCustomFieldListSingleConstituent.api.loading === "idle") {
-        state.constituentCustomFieldListSingleConstituent.api.loading = "pending";
+      if (
+        state.constituentCustomFieldListSingleConstituent.api.loading === "idle"
+      ) {
+        state.constituentCustomFieldListSingleConstituent.api.loading =
+          "pending";
         state.constituentCustomFieldListSingleConstituent.api.error = null;
       }
     },
+
     [customFieldEducationList.fulfilled]: (state, action) => {
       if (state.customFieldEducationList.api.loading === "pending") {
         state.customFieldEducationList.entities = action.payload;
@@ -1771,7 +1969,7 @@ export const slice = createSlice({
         state.getParticipantLevels.api.error = null;
       }
     },
-    [createActionAttachment.fulfilled]: state => {
+    [createActionAttachment.fulfilled]: (state) => {
       if (state.createActionAttachmentApi.loading === "pending") {
         state.createActionAttachmentApi.loading = "idle";
       }
@@ -1782,13 +1980,13 @@ export const slice = createSlice({
         state.createActionAttachmentApi.loading = "idle";
       }
     },
-    [createActionAttachment.pending]: state => {
+    [createActionAttachment.pending]: (state) => {
       if (state.createActionAttachmentApi.loading === "idle") {
         state.createActionAttachmentApi.loading = "pending";
         state.createActionAttachmentApi.error = null;
       }
     },
-    [createConstituentAction.fulfilled]: state => {
+    [createConstituentAction.fulfilled]: (state) => {
       if (state.createConstituentActionApi.loading === "pending") {
         state.createConstituentActionApi.loading = "idle";
       }
@@ -1799,13 +1997,13 @@ export const slice = createSlice({
         state.createConstituentActionApi.loading = "idle";
       }
     },
-    [createConstituentAction.pending]: state => {
+    [createConstituentAction.pending]: (state) => {
       if (state.createConstituentActionApi.loading === "idle") {
         state.createConstituentActionApi.loading = "pending";
         state.createConstituentActionApi.error = null;
       }
     },
-    [createRating.fulfilled]: state => {
+    [createRating.fulfilled]: (state) => {
       if (state.createRatingApi.loading === "pending") {
         state.createRatingApi.loading = "idle";
       }
@@ -1816,13 +2014,13 @@ export const slice = createSlice({
         state.createRatingApi.loading = "idle";
       }
     },
-    [createRating.pending]: state => {
+    [createRating.pending]: (state) => {
       if (state.createRatingApi.loading === "idle") {
         state.createRatingApi.loading = "pending";
         state.createRatingApi.error = null;
       }
     },
-    [createRelationship.fulfilled]: state => {
+    [createRelationship.fulfilled]: (state) => {
       if (state.createRelationshipApi.loading === "pending") {
         state.createRelationshipApi.loading = "idle";
       }
@@ -1833,13 +2031,13 @@ export const slice = createSlice({
         state.createRelationshipApi.loading = "idle";
       }
     },
-    [createRelationship.pending]: state => {
+    [createRelationship.pending]: (state) => {
       if (state.createRelationshipApi.loading === "idle") {
         state.createRelationshipApi.loading = "pending";
         state.createRelationshipApi.error = null;
       }
     },
-    [deleteConstituentAction.fulfilled]: state => {
+    [deleteConstituentAction.fulfilled]: (state) => {
       if (state.deleteConstituentActionApi.loading === "pending") {
         state.deleteConstituentActionApi.loading = "idle";
       }
@@ -1850,13 +2048,13 @@ export const slice = createSlice({
         state.deleteConstituentActionApi.loading = "idle";
       }
     },
-    [deleteConstituentAction.pending]: state => {
+    [deleteConstituentAction.pending]: (state) => {
       if (state.deleteConstituentActionApi.loading === "idle") {
         state.deleteConstituentActionApi.loading = "pending";
         state.deleteConstituentActionApi.error = null;
       }
     },
-    [deleteConstituentActionAttachment.fulfilled]: state => {
+    [deleteConstituentActionAttachment.fulfilled]: (state) => {
       if (state.deleteConstituentActionAttachmentApi.loading === "pending") {
         state.deleteConstituentActionAttachmentApi.loading = "idle";
       }
@@ -1867,13 +2065,13 @@ export const slice = createSlice({
         state.deleteConstituentActionAttachmentApi.loading = "idle";
       }
     },
-    [deleteConstituentActionAttachment.pending]: state => {
+    [deleteConstituentActionAttachment.pending]: (state) => {
       if (state.deleteConstituentActionAttachmentApi.loading === "idle") {
         state.deleteConstituentActionAttachmentApi.loading = "pending";
         state.deleteConstituentActionAttachmentApi.error = null;
       }
     },
-    [deleteConstituentActionCustomField.fulfilled]: state => {
+    [deleteConstituentActionCustomField.fulfilled]: (state) => {
       if (state.deleteConstituentActionCustomFieldApi.loading === "pending") {
         state.deleteConstituentActionCustomFieldApi.loading = "idle";
       }
@@ -1884,13 +2082,13 @@ export const slice = createSlice({
         state.deleteConstituentActionCustomFieldApi.loading = "idle";
       }
     },
-    [deleteConstituentActionCustomField.pending]: state => {
+    [deleteConstituentActionCustomField.pending]: (state) => {
       if (state.deleteConstituentActionCustomFieldApi.loading === "idle") {
         state.deleteConstituentActionCustomFieldApi.loading = "pending";
         state.deleteConstituentActionCustomFieldApi.error = null;
       }
     },
-    [deleteRating.fulfilled]: state => {
+    [deleteRating.fulfilled]: (state) => {
       if (state.deleteRatingApi.loading === "pending") {
         state.deleteRatingApi.loading = "idle";
       }
@@ -1901,13 +2099,13 @@ export const slice = createSlice({
         state.deleteRatingApi.loading = "idle";
       }
     },
-    [deleteRating.pending]: state => {
+    [deleteRating.pending]: (state) => {
       if (state.deleteRatingApi.loading === "idle") {
         state.deleteRatingApi.loading = "pending";
         state.deleteRatingApi.error = null;
       }
     },
-    [deleteRelationship.fulfilled]: state => {
+    [deleteRelationship.fulfilled]: (state) => {
       if (state.deleteRelationshipApi.loading === "pending") {
         state.deleteRelationshipApi.loading = "idle";
       }
@@ -1918,13 +2116,13 @@ export const slice = createSlice({
         state.deleteRelationshipApi.loading = "idle";
       }
     },
-    [deleteRelationship.pending]: state => {
+    [deleteRelationship.pending]: (state) => {
       if (state.deleteRelationshipApi.loading === "idle") {
         state.deleteRelationshipApi.loading = "pending";
         state.deleteRelationshipApi.error = null;
       }
     },
-    [editRelationship.fulfilled]: state => {
+    [editRelationship.fulfilled]: (state) => {
       if (state.editRelationshipApi.loading === "pending") {
         state.editRelationshipApi.loading = "idle";
       }
@@ -1935,7 +2133,7 @@ export const slice = createSlice({
         state.editRelationshipApi.loading = "idle";
       }
     },
-    [editRelationship.pending]: state => {
+    [editRelationship.pending]: (state) => {
       if (state.editRelationshipApi.loading === "idle") {
         state.editRelationshipApi.loading = "pending";
         state.editRelationshipApi.error = null;
@@ -2103,5 +2301,6 @@ export const slice = createSlice({
         state.titles.api.error = null;
       }
     }
+
   }
 });

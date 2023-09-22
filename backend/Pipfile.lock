@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1a52f3aa8a53f924acd29c605be17ad315f1a04df267a907207564ab58ae5ba9"
+            "sha256": "0808c6c19b14b203a0ca70927f7bd54d009351fd5035ce0d5ae9bb7bc03ccc14"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -55,6 +55,10 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==5.3.1"
+        },
+        "cb-django-blackbaud": {
+            "editable": true,
+            "path": "./modules/blackbaud"
         },
         "cb-django-booking": {
             "editable": true,
