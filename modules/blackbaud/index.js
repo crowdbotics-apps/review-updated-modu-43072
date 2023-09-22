@@ -11,7 +11,10 @@ const BlackbaudSky = ({
   const [browserRequesting, setBrowserRequesting] = useState(false);
   const options = useContext(OptionsContext);
   const {
-    issuer, clientId, redirectUrl, successNavScreen
+    issuer,
+    clientId,
+    redirectUrl,
+    successNavScreen
   } = options;
   const dispatch = useDispatch();
   const config = {
@@ -19,11 +22,11 @@ const BlackbaudSky = ({
     clientId: clientId,
     redirectUrl: redirectUrl
   };
-  useEffect(() => {
+  useEffect(() => {}, []);
 
-  }, []);
   const login = async () => {
     setBrowserRequesting(true);
+
     try {
       authorize(config).then(response => {
         dispatch(slice.actions.saveAccessToken(response?.accessToken));
@@ -38,13 +41,11 @@ const BlackbaudSky = ({
       setBrowserRequesting(false);
     }
   };
+
   return <View style={styles.container}>
         <View style={styles.logoTopView}>
           <Image source={require("./assets/whitebaudLogo.png")} style={styles.blackbaudTopLogo} />
-          <ImageBackground
-          source={require("./assets/topBackground.png")}
-          style={styles.topBackground}
-        ></ImageBackground>
+          <ImageBackground source={require("./assets/topBackground.png")} style={styles.topBackground}></ImageBackground>
         </View>
         <ImageBackground source={require("./assets/bottomBackground.png")} style={styles.bottomBackground} resizeMode="cover">
           <View style={styles.logoView}>
@@ -58,10 +59,10 @@ const BlackbaudSky = ({
                 Login to your Blackbaud Sky account
               </Text>
             </View>
-          <Pressable style={styles.loginButton} onPress={() => { login(); }} >
-            {browserRequesting
-              ? <ActivityIndicator size={"large"} color={"#000"} />
-              : <Text style={styles.btnTextColor}>
+          <Pressable style={styles.loginButton} onPress={() => {
+        login();
+      }}>
+            {browserRequesting ? <ActivityIndicator size={"large"} color={"#000"} /> : <Text style={styles.btnTextColor}>
               Login
             </Text>}
           </Pressable>
@@ -122,8 +123,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16
   },
-  infoContainer: {
-  },
+  infoContainer: {},
   infoTitleText: {
     color: "#000",
     fontSize: 24,
@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
     textAlign: "center"
   }
 });
-
 export default {
   title: "BlackbaudSky",
   navigator: BlackbaudSky,

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { getGlobalOptions } from "@options";
-
 const global = getGlobalOptions();
 const BASE_URL = global.url; // change your BASE_URL in `options/options.js` to edit this value
 
@@ -52,7 +51,7 @@ export const addAttendee = (accessToken, payload, eventId) => {
   };
   return axios.request(config);
 };
-export const getAddressList = (accessToken) => {
+export const getAddressList = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -64,8 +63,7 @@ export const getAddressList = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCodeList = (accessToken) => {
+export const getConstituentCodeList = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -77,8 +75,7 @@ export const getConstituentCodeList = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCodeDetails = (data) => {
+export const getConstituentCodeDetails = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -90,8 +87,7 @@ export const getConstituentCodeDetails = (data) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCodeListInConstituent = (data) => {
+export const getConstituentCodeListInConstituent = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -103,8 +99,7 @@ export const getConstituentCodeListInConstituent = (data) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCustomFieldCategories = (accessToken) => {
+export const getConstituentCustomFieldCategories = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -116,8 +111,7 @@ export const getConstituentCustomFieldCategories = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCustomFieldCategoriesDetails = (accessToken) => {
+export const getConstituentCustomFieldCategoriesDetails = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -129,8 +123,7 @@ export const getConstituentCustomFieldCategoriesDetails = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCustomFieldCategoriesValues = (data) => {
+export const getConstituentCustomFieldCategoriesValues = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -142,8 +135,7 @@ export const getConstituentCustomFieldCategoriesValues = (data) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentCustomFieldList = (accessToken) => {
+export const getConstituentCustomFieldList = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -155,8 +147,7 @@ export const getConstituentCustomFieldList = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentList = (accessToken) => {
+export const getConstituentList = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -168,8 +159,7 @@ export const getConstituentList = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const createConstituent = (data) => {
+export const createConstituent = data => {
   const config = {
     method: "post",
     maxBodyLength: Infinity,
@@ -182,8 +172,7 @@ export const createConstituent = (data) => {
   };
   return axios.request(config);
 };
-
-export const getChannels = (accessToken) => {
+export const getChannels = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -195,8 +184,7 @@ export const getChannels = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentAppealList = (data) => {
+export const getConstituentAppealList = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -208,8 +196,7 @@ export const getConstituentAppealList = (data) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentAttachmentList = (data) => {
+export const getConstituentAttachmentList = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -221,8 +208,7 @@ export const getConstituentAttachmentList = (data) => {
   };
   return axios.request(config);
 };
-
-export const getConstituentDetails = (data) => {
+export const getConstituentDetails = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -234,8 +220,7 @@ export const getConstituentDetails = (data) => {
   };
   return axios.request(config);
 };
-
-export const getEducationList = (accessToken) => {
+export const getEducationList = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -247,8 +232,7 @@ export const getEducationList = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getCurrencyConfiguration = (accessToken) => {
+export const getCurrencyConfiguration = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -260,8 +244,7 @@ export const getCurrencyConfiguration = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getCountries = (accessToken) => {
+export const getCountries = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -272,10 +255,9 @@ export const getCountries = (accessToken) => {
     }
   };
   return axios.request(config);
-};
+}; // start
 
-// start
-export const getConstituentCustomFieldListSingleConstituent = (data) => {
+export const getConstituentCustomFieldListSingleConstituent = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -287,7 +269,7 @@ export const getConstituentCustomFieldListSingleConstituent = (data) => {
   };
   return axios.request(config);
 };
-export const getCustomFieldEducationList = (data) => {
+export const getCustomFieldEducationList = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -299,7 +281,7 @@ export const getCustomFieldEducationList = (data) => {
   };
   return axios.request(config);
 };
-export const getEducationCustomFieldCategories = (accessToken) => {
+export const getEducationCustomFieldCategories = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -311,8 +293,7 @@ export const getEducationCustomFieldCategories = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getEducationDegrees = (accessToken) => {
+export const getEducationDegrees = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -324,7 +305,7 @@ export const getEducationDegrees = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getEducationConstituentList = (data) => {
+export const getEducationConstituentList = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -336,7 +317,7 @@ export const getEducationConstituentList = (data) => {
   };
   return axios.request(config);
 };
-export const getEducationRecord = (data) => {
+export const getEducationRecord = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -348,7 +329,7 @@ export const getEducationRecord = (data) => {
   };
   return axios.request(config);
 };
-export const getEducationsSchools = (accessToken) => {
+export const getEducationsSchools = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -360,7 +341,7 @@ export const getEducationsSchools = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getEducationStatuses = (accessToken) => {
+export const getEducationStatuses = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -372,7 +353,7 @@ export const getEducationStatuses = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getEducationSubject = (accessToken) => {
+export const getEducationSubject = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -384,7 +365,7 @@ export const getEducationSubject = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getEducationTypes = (accessToken) => {
+export const getEducationTypes = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -396,7 +377,7 @@ export const getEducationTypes = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getEventAttachmentList = (data) => {
+export const getEventAttachmentList = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -408,7 +389,7 @@ export const getEventAttachmentList = (data) => {
   };
   return axios.request(config);
 };
-export const getEventFees = (data) => {
+export const getEventFees = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -420,7 +401,7 @@ export const getEventFees = (data) => {
   };
   return axios.request(config);
 };
-export const getEventParticipantOptions = (data) => {
+export const getEventParticipantOptions = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -432,7 +413,7 @@ export const getEventParticipantOptions = (data) => {
   };
   return axios.request(config);
 };
-export const getEventParticipantsList = (data) => {
+export const getEventParticipantsList = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -444,7 +425,7 @@ export const getEventParticipantsList = (data) => {
   };
   return axios.request(config);
 };
-export const getEventParticipantsDonation = (data) => {
+export const getEventParticipantsDonation = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -456,7 +437,7 @@ export const getEventParticipantsDonation = (data) => {
   };
   return axios.request(config);
 };
-export const getEventParticipantFeePayments = (data) => {
+export const getEventParticipantFeePayments = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -468,7 +449,7 @@ export const getEventParticipantFeePayments = (data) => {
   };
   return axios.request(config);
 };
-export const getEventParticipantFees = (data) => {
+export const getEventParticipantFees = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -480,7 +461,7 @@ export const getEventParticipantFees = (data) => {
   };
   return axios.request(config);
 };
-export const getParticipantOptions = (data) => {
+export const getParticipantOptions = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -492,7 +473,7 @@ export const getParticipantOptions = (data) => {
   };
   return axios.request(config);
 };
-export const getEventAttachment = (data) => {
+export const getEventAttachment = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -504,7 +485,7 @@ export const getEventAttachment = (data) => {
   };
   return axios.request(config);
 };
-export const getEventAttachmentTags = (accessToken) => {
+export const getEventAttachmentTags = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -516,7 +497,7 @@ export const getEventAttachmentTags = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getEventCategories = (accessToken) => {
+export const getEventCategories = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -528,7 +509,7 @@ export const getEventCategories = (accessToken) => {
   };
   return axios.request(config);
 };
-export const getParticipant = (data) => {
+export const getParticipant = data => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -540,7 +521,7 @@ export const getParticipant = (data) => {
   };
   return axios.request(config);
 };
-export const getParticipantLevels = (accessToken) => {
+export const getParticipantLevels = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -689,7 +670,7 @@ export const getConstituentActionAttachments = (accessToken, id) => {
   };
   return axios.request(config);
 };
-export const getConstituentActionCustomFieldsCategories = (accessToken) => {
+export const getConstituentActionCustomFieldsCategories = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -701,8 +682,7 @@ export const getConstituentActionCustomFieldsCategories = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getRatingCategories = (accessToken) => {
+export const getRatingCategories = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -726,7 +706,7 @@ export const getRelationshipDetails = (accessToken, id) => {
   };
   return axios.request(config);
 };
-export const getRelationshipListInAllConstituents = (accessToken) => {
+export const getRelationshipListInAllConstituents = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -738,7 +718,6 @@ export const getRelationshipListInAllConstituents = (accessToken) => {
   };
   return axios.request(config);
 };
-
 export const getRelationshipListInSingleConstituent = (accessToken, id) => {
   const config = {
     method: "get",
@@ -751,8 +730,7 @@ export const getRelationshipListInSingleConstituent = (accessToken, id) => {
   };
   return axios.request(config);
 };
-
-export const getRelationshipTypes = (accessToken) => {
+export const getRelationshipTypes = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -764,8 +742,7 @@ export const getRelationshipTypes = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getSuffixes = (accessToken) => {
+export const getSuffixes = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -777,8 +754,7 @@ export const getSuffixes = (accessToken) => {
   };
   return axios.request(config);
 };
-
-export const getTitles = (accessToken) => {
+export const getTitles = accessToken => {
   const config = {
     method: "get",
     maxBodyLength: Infinity,
@@ -790,7 +766,6 @@ export const getTitles = (accessToken) => {
   };
   return axios.request(config);
 };
-
 export const api = {
   getEventListing,
   getEventDetails,
