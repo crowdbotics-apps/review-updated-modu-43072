@@ -31,6 +31,7 @@
     "@modules/side-drawer": "file:./modules/side-drawer/",
     "@modules/signature": "file:./modules/signature/",
     "@modules/terms-and-conditions-webview": "file:./modules/terms-and-conditions-webview/",
+    "@modules/user-profile": "file:./modules/user-profile/",
     "@modules/youtube-player": "file:./modules/youtube-player/",
     "@react-native-async-storage/async-storage": "1.17.9",
     "@react-native-camera-roll/camera-roll": "5.0.2",
