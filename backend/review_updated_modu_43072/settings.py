@@ -84,10 +84,13 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
     'django_extensions',
     'drf_spectacular',
     'storages',
     'import_export',
+    'fcm_django',
 ]
 MODULES_APPS = get_modules()
 
@@ -223,6 +226,14 @@ EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
 EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+SENDGRID_API_KEY = env.str("SENDGRID_API_KEY", "")
+ACCOUNT_SID = env.str("ACCOUNT_SID", "")
+AUTH_TOKEN = env.str("AUTH_TOKEN", "")
+TOTP_SECRET = env.str("TOTP_SECRET", "3232323232323232")
+OTP_EXPIRATION_TIME = env.str("OTP_EXPIRATION_TIME", 60)
+EMAIL_SUBJECT = env.str("EMAIL_SUBJECT", "Crowdbotics 2FA code")
+EMAIL=env.str("EMAIL", "")
+PHONE=env.str("PHONE", "")
 
 
 # AWS S3 config
@@ -269,7 +280,7 @@ if DEBUG or not (EMAIL_HOST_USER and EMAIL_HOST_PASSWORD):
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
-# GCP config 
+# GCP config
 def google_service_account_config():
     # base64 encoded service_account.json file
     service_account_config = env.str("GS_CREDENTIALS", "")
@@ -287,3 +298,15 @@ if GS_BUCKET_NAME:
     DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
     STATICFILES_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
     GS_DEFAULT_ACL = "publicRead"
+
+
+OKTA_BASE_URL = "https://okta.com/api/v1"
+OKTA_API_TOKEN = "asdvh36tdygeyg36td36tdysg3633"
+
+FCM_DJANGO_SETTINGS = {"FCM_SERVER_KEY": env.str("FCM_SERVER_KEY", "Your FCM Server Key")}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
