@@ -90,6 +90,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [blackbaud]()
 - [firebase-push-notifications]()
 - [django-typeform-webhook](backend/modules)
+- [react-native-typeform-webhook](modules/typeform-webhook)
 
 # Getting started: Frontend
 
