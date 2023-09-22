@@ -10,6 +10,10 @@
   android:allowBackup="false" android:theme="@style/AppTheme"
     tools:replace="android:label"
   >
+  <meta-data
+  android:name="com.google.android.geo.API_KEY"
+  android:value="Your Google maps api key"
+  />
     <activity android:name=".MainActivity"
     android:label="@string/original_app_name"
     android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
