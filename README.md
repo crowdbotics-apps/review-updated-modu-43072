@@ -92,6 +92,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-typeform-webhook](backend/modules)
 - [react-native-typeform-webhook](modules/typeform-webhook)
 - [react-native-address-selection-google-autocomplete](modules/address-selection-autocomplete)
+- [react-native-social-login](modules/social-login)
 
 # Getting started: Frontend
 

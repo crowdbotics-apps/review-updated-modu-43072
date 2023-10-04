@@ -33,6 +33,7 @@
     "@modules/qr-code": "file:./modules/qr-code/",
     "@modules/side-drawer": "file:./modules/side-drawer/",
     "@modules/signature": "file:./modules/signature/",
+    "@modules/social-login": "file:./modules/social-login/",
     "@modules/terms-and-conditions-webview": "file:./modules/terms-and-conditions-webview/",
     "@modules/typeform-webhook": "file:./modules/typeform-webhook/",
     "@modules/youtube-player": "file:./modules/youtube-player/",
